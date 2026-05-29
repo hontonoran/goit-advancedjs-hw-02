@@ -9,8 +9,7 @@ export default defineConfig(({ command }) => {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
-
-    base: '/goit-advancedjs-hw-01/',
+    base: '/goit-advancedjs-hw-02/',
     root: 'src',
 
     css: {
@@ -25,8 +24,6 @@ export default defineConfig(({ command }) => {
 
     build: {
       sourcemap: true,
-      outDir: '../dist',
-      emptyOutDir: true,
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -35,12 +32,25 @@ export default defineConfig(({ command }) => {
               return 'vendor';
             }
           },
-          entryFileNames: '[name].js',
-          assetFileNames: 'assets/[name]-[hash][extname]',
+          entryFileNames: chunkInfo => {
+            if (chunkInfo.name === 'commonHelpers') {
+              return 'commonHelpers.js';
+            }
+            return '[name].js';
+          },
+          assetFileNames: assetInfo => {
+            const assetName = assetInfo.names?.[0] || '';
+
+            if (assetName.endsWith('.html')) {
+              return '[name].[ext]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          },
         },
       },
+      outDir: '../dist',
+      emptyOutDir: true,
     },
-
     plugins: [injectHTML(), FullReload(['./src/**/*.html'])],
   };
 });

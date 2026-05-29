@@ -1,0 +1,34 @@
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  margin-top: 32px;
+  margin-bottom: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffbfd0, #ffc7e8);
+  color: #c44fd8;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 20px rgba(196, 79, 216, 0.22);
+  transition: transform 250ms ease, box-shadow 250ms ease,
+    background 250ms ease, color 250ms ease;
+}
+
+.back-link::before {
+  content: '←';
+  font-size: 16px;
+}
+
+.back-link:hover,
+.back-link:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(196, 79, 216, 0.32);
+  background: linear-gradient(135deg, #ffacc5, #f7b6ff);
+  color: #a832c4;
+}
+
+.back-link:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 14px rgba(196, 79, 216, 0.22);
+}

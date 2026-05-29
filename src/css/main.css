@@ -1,45 +1,43 @@
-* {
-  box-sizing: border-box;
-}
+/* Common styles */
+@import url('./debug.css');
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@import 'modern-normalize';
 
-a {
-  text-decoration: none;
-}
-
-button {
-  font: inherit;
-  cursor: pointer;
-}
+@import url('./reset.css');
+@import url('./common.css');
 
 body {
-  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.04em;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 16px;
 }
 
-.page-header {
-  padding: 24px 0 32px 24px;
+.task-list {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding-top: 50px;
 }
 
-.nav-btn {
+.task-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
+  min-width: 160px;
+  min-height: 72px;
+  padding: 16px 32px;
 
   border-radius: 18px;
 
   background: linear-gradient(135deg, #ffbfd0, #ffc7e8);
   color: #c44fd8;
 
+  font-size: 26px;
   font-weight: 600;
   letter-spacing: 0.04em;
 
@@ -52,28 +50,15 @@ body {
     color 250ms ease;
 }
 
-.nav-btn:hover,
-.nav-btn:focus {
+.task-btn:hover,
+.task-btn:focus {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(196, 79, 216, 0.32);
   background: linear-gradient(135deg, #ffacc5, #f7b6ff);
   color: #a832c4;
 }
 
-.nav-btn:active {
+.task-btn:active {
   transform: translateY(0);
   box-shadow: 0 5px 14px rgba(196, 79, 216, 0.22);
-}
-
-.nav-btn--small {
-  min-width: 96px;
-  min-height: 40px;
-  padding: 8px 14px;
-  font-size: 16px;
-  border-radius: 12px;
-}
-
-.nav-btn--back::before {
-  content: '←';
-  font-size: 18px;
 }

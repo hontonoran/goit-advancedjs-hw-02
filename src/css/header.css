@@ -1,0 +1,43 @@
+.header {
+  padding: 20px 0;
+  background-color: #3b0764;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffbfd0, #ffc7e8);
+  color: #c44fd8;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 20px rgba(196, 79, 216, 0.22);
+  transition: transform 250ms ease, box-shadow 250ms ease,
+    background 250ms ease, color 250ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(196, 79, 216, 0.32);
+  background: linear-gradient(135deg, #ffacc5, #f7b6ff);
+  color: #a832c4;
+}
+
+.nav-link:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 14px rgba(196, 79, 216, 0.22);
+}

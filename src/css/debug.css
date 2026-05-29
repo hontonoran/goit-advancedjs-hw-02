@@ -1,0 +1,37 @@
+/* ========== DEBUG ========== */
+:root {
+  --debug: 1px dashed red;
+  /* --debug: none; */
+}
+
+.hidden {
+  display: none;
+}
+
+/* * {
+  outline: var(--debug);
+} */
+
+body.debug-mode * {
+  outline: 1px dashed red;
+}
+
+/* Підсвітити картинки без alt */
+body.debug-mode img:not([alt]) {
+  outline: 5px solid fuchsia !important;
+  filter: blur(2px);
+}
+
+/* Порожні посилання або кнопки */
+body.debug-mode a:empty,
+body.debug-mode button:empty {
+  outline: 5px solid orange !important;
+}
+
+/* Посилання, які ведуть в нікуди */
+body.debug-mode a[href='#'],
+body.debug-mode a[href=''] {
+  background: yellow !important;
+  border: 2px dashed black !important;
+}
+/* ========== /DEBUG ========== */

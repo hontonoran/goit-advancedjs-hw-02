@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.form > label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 6px;
+}
+
+.form input[type='number'] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+}
+
+fieldset {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+legend {
+  padding: 0 6px;
+  font-weight: 500;
+}
+
+fieldset label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+}
+
+.notification-btn {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #7d7d7d;
+  border-radius: 4px;
+  background-color: #eeeded;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.notification-btn:hover {
+  background-color: #dad9d9;
+}
