@@ -1,0 +1,66 @@
+@import './common.css';
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 408px;
+
+  border-radius: 8px;
+
+  padding: 24px;
+  margin: 0 auto;
+
+  color: rgba(46, 47, 66, 1);
+  background-color: rgba(255, 255, 255, 1);
+
+  label {
+    display: block;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+
+    font: inherit;
+    border: 1px solid rgba(128, 128, 128, 1);
+    border-radius: 4px;
+
+    transition: border-color 250ms ease;
+  }
+
+  textarea {
+    height: 80px;
+    resize: none;
+  }
+
+  input:hover,
+  textarea:hover {
+    border-color: rgba(0, 0, 0, 1);
+  }
+
+  button[type='submit'] {
+    display: inline-block;
+    padding: 8px 16px;
+    align-self: flex-start;
+    min-width: 95px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+    outline: none;
+
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(78, 117, 255, 1);
+
+    transition: background-color 250ms ease;
+  }
+
+  button[type='submit']:hover,
+  button[type='submit']:focus {
+    background-color: rgba(108, 140, 255, 1);
+  }
+}
